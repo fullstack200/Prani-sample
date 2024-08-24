@@ -1,0 +1,249 @@
+body {
+    font-family: "Nunito", sans-serif;
+    background-color: white;
+    margin: 0;
+}
+
+#navbar {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    z-index: 1;
+}
+
+#navbar i {
+    font-size: 1.7rem;
+    color: white;
+    background-color: forestgreen;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#navbar button,
+.caption button {
+    background-color: forestgreen;
+    color: white;
+    border-style: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.brand_name p, .ratings-div>p {
+    color: forestgreen;
+}
+
+.ratings i{
+    color: gold;
+}
+
+@media only screen and (max-width: 480px) {
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    #navbar {
+        width: 95%;
+        border-radius: 10px;
+        margin: 10px;
+    }
+
+    #navbar i {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    #navbar button {
+        padding: 10px;
+    }
+
+    /* Styles for mobile devices (portrait) */
+    .nav-mobile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px;
+    }
+
+    .brand_name p {
+        text-align: center;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .brand_name .name {
+        font-size: 1.5rem;
+        font-weight: 1000;
+    }
+
+    .nav-mobile>div>button>p {
+        margin: 7px 7px;
+    }
+
+    .slider_container {
+        position: relative;
+        width: 100%;
+        height: 85vh;
+        /* Adjust height to make images taller */
+        /* Adjust height to 60% of the viewport height for a larger display */
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .slider {
+        position: relative;
+        width: 500%;
+        /* Adjust width according to the number of slides */
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        animation: 30s cubic-bezier(1, 0.95, 0.565, 1) sliding infinite;
+    }
+
+    .slide {
+        position: relative;
+        min-width: 100%;
+        /* Each slide takes full width */
+        height: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 85vh;
+        /* Make image height fill the container */
+        object-fit: cover;
+        /* Ensure the image covers the container */
+    }
+
+    .slide .caption h1 {
+        font-weight: 1000;
+    }
+
+    .slide .caption {
+        width: 300px;
+        position: absolute;
+        left: 0;
+        bottom: 15%;
+        font-size: 2rem;
+        /* Adjust font size for better readability on smaller screens */
+        font-weight: 1000;
+        color: white;
+        text-transform: capitalize;
+        padding: 1rem 1rem;
+        border-radius: 0 2rem 2rem 0;
+        text-shadow: 2px 2px 4px forestgreen;
+    }
+
+    .caption button {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    /* Animation for sliding effect */
+    @keyframes sliding {
+        0% {
+            transform: translateX(0%);
+        }
+
+        20% {
+            transform: translateX(0%);
+        }
+
+        25% {
+            transform: translateX(-100%);
+        }
+
+        45% {
+            transform: translateX(-100%);
+        }
+
+        50% {
+            transform: translateX(-200%);
+        }
+
+        70% {
+            transform: translateX(-200%);
+        }
+
+        75% {
+            transform: translateX(-300%);
+        }
+
+        95% {
+            transform: translateX(-300%);
+        }
+
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+
+    #head-para {
+        padding: 40px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #head-para>div>h1,
+    #head-para>div>p {
+        text-align: center;
+    }
+
+    .intro>h1 {
+        font-size: 1.7rem;
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .intro>p {
+        font-size: 0.9rem;
+    }
+
+    .ratings-div {
+        margin: 40px 0;
+        border: 2px solid forestgreen;
+       
+        padding:10px;
+    }
+
+    .ratings-div p {
+        font-size: 1.2rem;
+    }
+
+    .ratings-div>p>span{
+        font-size: 1.5rem;
+        font-weight: 1000;
+    }
+
+    .ratings-div>p{
+        font-weight: 400;
+    }
+
+    .ratings{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .ratings>p{
+        font-size: 0.9rem;
+    }
+
+    .sub-rating{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
