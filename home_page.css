@@ -28,13 +28,75 @@ body {
     border-radius: 10px;
 }
 
-.brand_name p, .ratings-div>p {
+.brand_name p,
+.ratings-div>p {
     color: forestgreen;
 }
 
-.ratings i{
+.ratings i {
     color: gold;
 }
+
+/* Swiper Container */
+.swiper-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 40px;
+    /* Add padding to give space for the pagination bullets */
+}
+
+/* Swiper Wrapper and Slide */
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    width: 90%;
+    min-height: 400px;
+    max-height: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: forestgreen;
+    color: white;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Pagination Styling */
+.swiper-pagination {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    /* Adds space between the cards and the pagination bullets */
+}
+
+.swiper-pagination-bullet {
+    background-color: #bbb;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: forestgreen;
+}
+
+
 
 @media only screen and (max-width: 480px) {
 
@@ -211,24 +273,24 @@ body {
     .ratings-div {
         margin: 40px 0;
         border: 2px solid forestgreen;
-       
-        padding:10px;
+
+        padding: 10px;
     }
 
     .ratings-div p {
         font-size: 1.2rem;
     }
 
-    .ratings-div>p>span{
+    .ratings-div>p>span {
         font-size: 1.5rem;
         font-weight: 1000;
     }
 
-    .ratings-div>p{
+    .ratings-div>p {
         font-weight: 400;
     }
 
-    .ratings{
+    .ratings {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -236,14 +298,51 @@ body {
         margin: 10px 0;
     }
 
-    .ratings>p{
+    .ratings>p {
         font-size: 0.9rem;
     }
 
-    .sub-rating{
+    .sub-rating {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
 
+    .navigator {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menus {
+        padding: 40px;
+        width: 300px;
+        text-align: center;
+        margin: 10px 0;
+        border-radius: 10px;
+    }
+
+    .navigator a {
+        margin: 0;
+        text-decoration: none;
+    }
+
+    .gr {
+        background-color: forestgreen;
+        color: rgb(255, 210, 0);
+        font-weight: 800;
+    }
+
+    .wh {
+        color: forestgreen;
+        background-color: rgb(255, 210, 0);
+        font-weight: 800;
+    }
+
+    #test-h1 {
+        text-align: left !important;
+        margin: 50px 0 50px 10px;
+        font-size: 1.8rem;
     }
 }

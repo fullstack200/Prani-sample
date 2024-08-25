@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!--Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
+
     <!--Font Awsome Icons-->
     <script src="https://kit.fontawesome.com/562a44d30d.js" crossorigin="anonymous"></script>
+
+    <!-- Swiper JS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
     <title>Document</title>
     <link rel="stylesheet" href="home_page.css">
 </head>
@@ -108,19 +114,75 @@
                 <p>&nbsp;&nbsp;Google</p>
             </div>
         </div>
+        <div class="navigator">
+            <a href="">
+                <div class="menus gr">Open daily from 9 AM to 5 PM</div>
+            </a>
+            <a href="">
+                <div class="menus wh">Book Tickets</div>
+            </a>
+            <a href="">
+                <div class="menus gr">Accessability</div>
+            </a>
+            <a href="">
+                <div class="menus wh">FAQ's</div>
+            </a>
+            <a href="">
+                <div class="menus gr">Getting Here</div>
+            </a>
+        </div>
+
+        <div class="swiper-container">
+            <h1 id="test-h1">What Others Say</h1>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p>"Prani sanctuary saved my pet's life! The team is so compassionate and loving. Highly
+                            recommended!"</p>
+                        <h4>— John Doe</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p>"Adopting from Prani was the best decision. The process was smooth, and my new companion is
+                            amazing!"</p>
+                        <h4>— Jane Smith</h4>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p>"I volunteer here and it’s a truly fulfilling experience. The sanctuary is such a wonderful
+                            place."</p>
+                        <h4>— Emily Clark</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination outside the wrapper but inside container -->
+            <div class="swiper-pagination"></div>
+        </div>
     </section>
-
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 20, // Adds space between the slides
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 2, // Show two slides side by side on larger screens
+                    spaceBetween: 20,
+                }
+            },
+        });
     </script>
+
+
 </body>
 
 </html>
