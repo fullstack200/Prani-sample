@@ -378,16 +378,13 @@ body {
     .sub-explore i {
         color: forestgreen;
         font-size: 2rem;
+        margin-right: 15px;
     
     }
 
     #exp-h1 {
         text-align: left !important;
-        margin: 50px 0 10px 10px;
+        margin: 60px 0 20px 10px;
         font-size: 1.8rem;
     } 
-
-
-
-
 }
