@@ -79,6 +79,25 @@ body {
     overflow: hidden;
 }
 
+.explore-card {
+    width: 90%;
+    min-height: 400px;
+    max-height: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 /* Pagination Styling */
 .swiper-pagination {
     text-align: center;
@@ -98,12 +117,18 @@ body {
 
 
 
+
+
 @media only screen and (max-width: 480px) {
 
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+    }
+
+    p {
+        font-size: 0.9rem;
     }
 
     #navbar {
@@ -266,9 +291,7 @@ body {
         margin-bottom: 20px;
     }
 
-    .intro>p {
-        font-size: 0.9rem;
-    }
+
 
     .ratings-div {
         margin: 40px 0;
@@ -344,5 +367,28 @@ body {
         text-align: left !important;
         margin: 50px 0 50px 10px;
         font-size: 1.8rem;
+    }
+
+    #explore-sec {
+        padding-bottom: 0;
+    }
+
+    .explore img {
+        height: 200px;
+        width: 350px;
+        border-radius: 20px;
+    }
+
+    .sub-explore {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0;
+    }
+
+    .sub-explore i {
+        color: forestgreen;
+        font-size: 2rem;
+        margin-right: 20px;
     }
 }
