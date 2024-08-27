@@ -23,8 +23,17 @@
 
 <body>
     <section id="navbar">
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
         <div class="nav-mobile">
-            <div><i class="fa-solid fa-bars"></i></div>
+            <div><i class="fa-solid fa-bars" onclick="openNav()"></i></div>
             <div class="brand_name">
                 <p class="name">Prani</p>
                 <p class="tag-line">The Pet Sanctuary</p>
@@ -211,7 +220,7 @@
         </div>
         <p>© 2024 Prani Sanctuary, Somanahalli Village, Off Kanakapura Rd, Bengaluru, Karnataka, India, Pin- 560082. All
             rights reserved.</p>
-        <div class="arc-container">
+        <div id="arc" class="arc-container">
             <img src="0ec19b_0b8d7417acda4586b5fbbeef1.png" alt="Centered Image">
         </div>
     </section>
@@ -234,6 +243,14 @@
                 }
             },
         });
+
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
     </script>
 
 
